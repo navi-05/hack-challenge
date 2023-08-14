@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  scrollbar-color: red yellow;
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #C3C3C3;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #F0F0F0;
+  border-radius: 6px;
+  border: 3px solid #C3C3C3;
+}
+
+.padding-x {
+  @apply px-10 lg:px-32
+}
+
+.box-shadow {
+  box-shadow: 0 0 0 10px #F0F0F0;
+}
