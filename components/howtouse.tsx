@@ -26,14 +26,14 @@ const HowToUse = () => {
               <div className="border-neutral-300 border-b-1 border"/>
               <div className="flex flex-col gap-2 items-end ">
                 <p className="text-3xl font-semibold mb-4">02</p>
-                <p className="uppercase text-sm font-semibold">Check the car's charging port</p>
+                <p className="uppercase text-sm font-semibold">Check the car&apos;s charging port</p>
                 <p className="text-end text-neutral-500 max-lg:text-neutral-500 text-[14px]">Locate the charging port on your electric car. The location varies depending on the make and model but is usually located on one of the sides or at the front or rear of the vehicle.</p>
               </div>
               <div className="border-neutral-300 border-b-1 border"/>
               <div className="flex flex-col gap-2 items-end ">
                 <p className="text-3xl font-semibold mb-4">03</p>
                 <p className="uppercase text-sm font-semibold">Check the charger compatibility</p>
-                <p className="text-end text-neutral-500 max-lg:text-neutral-500 text-[14px]">Ensure that the charger you plan to use is compatible with your electric car. Different car models' may have specific charging requirements, so consult your car's manual or manufacturer.</p>
+                <p className="text-end text-neutral-500 max-lg:text-neutral-500 text-[14px]">Ensure that the charger you plan to use is compatible with your electric car. Different car models&apos; may have specific charging requirements, so consult your car&apos;s manual or manufacturer.</p>
               </div>
             </div>
 
@@ -52,7 +52,7 @@ const HowToUse = () => {
               <div className="flex flex-col gap-2 items-start ">
                 <p className="text-3xl font-semibold mb-4">04</p>
                 <p className="uppercase text-sm font-semibold">Connect the Charger</p>
-                <p className=" text-neutral-500 max-lg:text-neutral-500 text-[14px]">Depending on the charger type, follow these steps: Level1 Charger: Plug the charger into a standard 120V household outlet. Level2 Charger: connect the charger's plug to the 240V outlet. Then, connect the other end of the charger to your car's charging port. DC Fast Charger: They usually involve scanning a QR code or using an app, selecting the appropriate connector, and plugging it into your car's charing port.</p>
+                <p className=" text-neutral-500 max-lg:text-neutral-500 text-[14px]">Depending on the charger type, follow these steps: Level1 Charger: Plug the charger into a standard 120V household outlet. Level2 Charger: connect the charger&apos;s plug to the 240V outlet. Then, connect the other end of the charger to your car&apos;s charging port. DC Fast Charger: They usually involve scanning a QR code or using an app, selecting the appropriate connector, and plugging it into your car&apos;s charing port.</p>
               </div>
               <div className="border-neutral-300 border-b-1 border"/>
               <div className="flex flex-col gap-2 items-start ">
@@ -64,7 +64,7 @@ const HowToUse = () => {
               <div className="flex flex-col gap-2 items-start ">
                 <p className="text-3xl font-semibold mb-4">06</p>
                 <p className="uppercase text-sm font-semibold">Unplug and finish chargin</p>
-                <p className=" text-neutral-500 max-lg:text-neutral-500 text-[14px]">When your car reaches the desired battery level or when you're ready to stop charging.</p>
+                <p className=" text-neutral-500 max-lg:text-neutral-500 text-[14px]">When your car reaches the desired battery level or when you&apos;re ready to stop charging.</p>
               </div>
             </div>
           </div>

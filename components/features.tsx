@@ -38,7 +38,7 @@ const Features = () => {
               />
             </div>
             <h3 className="text-xl uppercase font-medium tracking-tighter">Energy Consumption</h3>
-            <p className=" text-neutral-400 w-[70%] text-sm -mt-2.5">we've been power effecient since we started around 60 kwh per day</p>
+            <p className=" text-neutral-400 w-[70%] text-sm -mt-2.5">we&apos;ve been power effecient since we started around 60 kwh per day</p>
           </div>
           <div className="flex-1 w-full flex flex-col gap-5">
             <div className="relative w-full h-[300px] sm:h-[400px] xl:h-[500px]">
