@@ -1,8 +1,11 @@
+'use client'
+
 import Image from "next/image"
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center" id="about">
 
       <div className="flex flex-col justify-center items-center lg:w-1/2 w-full padding-x lg:px-0 mx-auto uppercase text-secondary text-center tracking-wide pt-24">
         <p className="text-black text-xl font-semibold">About us</p>
@@ -15,7 +18,7 @@ const About = () => {
                 <Image
                   src={'/images/about.png'}
                   alt="about-image"
-                  className=" inline scale-150 absolute bottom-7 right-0 "
+                  className=" inline scale-150 absolute bottom-7 right-0"
                   height={150}
                   width={150}
                 />
@@ -26,14 +29,19 @@ const About = () => {
         </div>
       </div>
 
-      <div className="md:w-1/2 w-full h-1/2 md:scale-110 scale-75 relative">
+       <motion.div 
+          className="md:w-1/2 w-full h-1/2 md:scale-110 scale-75 relative"
+          initial={{ opacity: 0, translateY: '100px' }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: .5 }}
+        >
         <Image 
           src={'/images/tesla.png'}
           alt="tesla-image"
           fill
           className="lg:object-cover object-contain"
         />
-      </div>
+      </motion.div>
 
     </div>
   )

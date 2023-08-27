@@ -1,5 +1,8 @@
-import Image from "next/image"
+'use client'
+
 import Link from "next/link"
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 const HowToUse = () => {
   return (
@@ -9,15 +12,40 @@ const HowToUse = () => {
 
         <div className="w-full uppercase flex max-sm:flex-col flex-row items-center justify-center gap-2 text-primary font-semibold
         3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-5xl md:text-4xl sm:text-2xl text-4xl">
-          <p>How to Use</p>
-          <p className="text-black">How to Use</p>
-          <p>How to Use</p>
+          <motion.div
+            initial={{ opacity: 0, x: 100}}
+            whileInView={{ opacity: 100, x: 0}}
+            transition={{ duration: 1, ease: 'easeOut'}}
+          >
+            How to Use
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 100 }}
+            transition={{ duration: 1 , ease: 'easeIn'}}
+            className="text-black"
+          >
+              How to Use
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100}}
+            whileInView={{ opacity: 100, x: 0}}
+            transition={{ duration: 1, ease: 'easeOut'}}
+          >
+            How to Use
+          </motion.div>
         </div>
 
         <div className="z-10 p-16 relative mr-3 ">
           <div className="z-0 flex lg:flex-row flex-col">
 
-            <div className="flex-1 flex-col space-y-10">
+            <motion.div 
+              className="flex-1 flex-col space-y-10"
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 100, x: 0 }}
+              transition={{ duration: .5, ease: 'easeInOut'}}
+              viewport={{ amount: .2}}
+            >
               <div className="flex flex-col gap-2 items-end ">
                 <p className="text-3xl font-semibold mb-4">01</p>
                 <p className="uppercase text-sm font-semibold">Determine the type of charger</p>
@@ -35,7 +63,7 @@ const HowToUse = () => {
                 <p className="uppercase text-sm font-semibold">Check the charger compatibility</p>
                 <p className="text-end text-neutral-500 max-lg:text-neutral-500 text-[14px]">Ensure that the charger you plan to use is compatible with your electric car. Different car models&apos; may have specific charging requirements, so consult your car&apos;s manual or manufacturer.</p>
               </div>
-            </div>
+            </motion.div>
 
             <div className="flex-1 flex-col">
               <div className="absolute h-full w-full top-0 left-3 -z-10">
@@ -48,7 +76,13 @@ const HowToUse = () => {
               </div>
             </div>
 
-            <div className="flex-1 flex-col space-y-10">
+            <motion.div 
+              className="flex-1 flex-col space-y-10"
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 100, x: 0 }}
+              transition={{ duration: .5, ease: 'easeInOut'}}
+              viewport={{ amount: .2}}
+            >
               <div className="flex flex-col gap-2 items-start ">
                 <p className="text-3xl font-semibold mb-4">04</p>
                 <p className="uppercase text-sm font-semibold">Connect the Charger</p>
@@ -66,7 +100,7 @@ const HowToUse = () => {
                 <p className="uppercase text-sm font-semibold">Unplug and finish chargin</p>
                 <p className=" text-neutral-500 max-lg:text-neutral-500 text-[14px]">When your car reaches the desired battery level or when you&apos;re ready to stop charging.</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         
@@ -94,9 +128,13 @@ const HowToUse = () => {
                 <p className="uppercase text-neutral-400/75 text-xs">Special Offer</p>
                 <h3 className="uppercase text-white text-2xl">50% OFF Prices</h3>
               </div>
-              <button className="px-5 py-2 bg-black text-white rounded-full uppercase text-sm">
+              <a 
+                href="https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/nearest/#fuel-station-record-fields" 
+                className="px-5 py-2 bg-black hover:bg-neutral-700 duration-200 transition ease-in text-white rounded-full uppercase text-sm cursor-pointer"
+                target="_blank"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
 
 
@@ -113,15 +151,15 @@ const HowToUse = () => {
             />
           </div>
           <div className="flex-1 relative w-96 h-[500px] overflow-hidden">
-            <div className="flex flex-col h-full justify-between sm:p-16 p-2.5">
+            <div className="flex flex-col h-full justify-between sm:p-16 max-xs:p-2 p-5">
               <div className="flex items-center justify-center gap-2.5">
                 <div className=" flex-1 3xl:text-6xl md:text-4xl text-xl uppercase font-semibold">
                   port charging
                 </div>
               </div>
               <div className="flex flex-col gap-2.5">
-                <p className="text-sm text-neutral-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo commodi impedit illum nihil, laborum quaerat dolore laudantium debitis ad. Repellat assumenda rerum necessitatibus nihil atque fugiat excepturi ratione ipsam quaerat?</p>
-                <Link href='/' className=" underline">
+                <p className="text-sm text-neutral-400">The unit that houses EVSE ports is sometimes called a charging post, which can have one or more EVSE ports. Connector: A connector is what is plugged into a vehicle to charge it.</p>
+                <Link href='https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/nearest/#fuel-station-record-fields' target="_blank" className=" underline">
                   TYPE OF PORT
                 </Link>
               </div>
