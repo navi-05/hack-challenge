@@ -1,8 +1,13 @@
 import Script from "next/script"
-
+import { auth } from "@clerk/nextjs"
+import { redirect } from "next/navigation"
 import ModalProvider from "@/providers/ModalProvider"
 
 const ProductLayout = ({ children }: { children: React.ReactNode}) => {
+
+  const { userId } = auth()
+  if(!userId) redirect('/sign-up')
+
   return (
       <div>
         <ModalProvider />
